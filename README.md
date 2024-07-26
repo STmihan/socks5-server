@@ -25,14 +25,15 @@ curl --socks5 localhost:1080 -U someuser:somepass http://ifcfg.co
 
 # List of supported config parameters
 
-|ENV variable|Type|Default|Description|
-|------------|----|-------|-----------|
-|PROXY_USER|String|EMPTY|Set proxy user (also required existed PROXY_PASS)|
-|PROXY_PASSWORD|String|EMPTY|Set proxy password for auth, used with PROXY_USER|
-|PROXY_PORT|String|1080|Set listen port for application inside docker container|
-|PROXY_HEALTHCHECK_PORT|String|1081|Set listen port for healthcheck endpoint inside docker container|
-|ALLOWED_DEST_FQDN|String|EMPTY|Allowed destination address regular expression pattern. Default allows all.|
-|ALLOWED_IPS|String|Empty|Set allowed IP's that can connect to proxy, separator `,`|
+|ENV variable|Type| Default | Description                                                                 |
+|------------|----|---------|-----------------------------------------------------------------------------|
+|PROXY_USER|String| EMPTY   | Set proxy user (also required existed PROXY_PASS)                           |
+|PROXY_PASSWORD|String| EMPTY   | Set proxy password for auth, used with PROXY_USER                           |
+|PROXY_PORT|String| 1080    | Set listen port for application inside docker container                     |
+|PROXY_HEALTHCHECK_PORT|String| 1081    | Set listen port for healthcheck endpoint inside docker container            |
+|ALLOWED_DEST_FQDN|String| EMPTY   | Allowed destination address regular expression pattern. Default allows all. |
+|ALLOWED_IPS|String| Empty   | Set allowed IP's that can connect to proxy, separator `,`                   |
+|ALLOWED_ORIGINS|String| *       | CORS for health check (* allows every origin), separator `,`                |
 
 
 # Build your own image:
